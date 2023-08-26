@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/responsive.dart';
+import 'package:flutter_dashboard/constants/responsive.dart';
 import 'package:flutter_dashboard/widgets/custom_card.dart';
 
 class FundingCardWidget extends StatelessWidget {

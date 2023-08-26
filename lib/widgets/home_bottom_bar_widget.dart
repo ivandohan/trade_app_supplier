@@ -15,7 +15,7 @@ class HomeBottomBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: currentIndex,
-      backgroundColor: Color(0xFF0C356A),
+      backgroundColor: Color(0xFF171821),
       selectedItemColor: Color(0xFFD5FFD0),
       unselectedItemColor: Colors.white,
       onTap: (index) {
@@ -28,12 +28,16 @@ class HomeBottomBarWidget extends StatelessWidget {
           label: 'Beranda',
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.account_balance_wallet),
+          label: 'Pendanaan',
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.balance_rounded),
           label: 'Lelang',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.account_balance_wallet),
-          label: 'Pinjaman',
+          icon: Icon(Icons.radar_sharp),
+          label: 'Portofolio',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.work_history_rounded),

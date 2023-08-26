@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/const.dart';
-import 'package:flutter_dashboard/responsive.dart';
+import 'package:flutter_dashboard/constants/const.dart';
+import 'package:flutter_dashboard/constants/responsive.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -12,8 +12,9 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 35,
+    return Container(
+      padding: const EdgeInsets.only(top: 40, left: 10, right: 10, bottom: 10),
+      height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

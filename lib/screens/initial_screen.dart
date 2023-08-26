@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/pages/debt/debt_page.dart';
-import 'package:flutter_dashboard/pages/funding/funding_page.dart';
-import 'package:flutter_dashboard/pages/home/home_page.dart';
-import 'package:flutter_dashboard/pages/home/widgets/header_widget.dart';
+import 'package:flutter_dashboard/screens/auction/auction_page.dart';
+import 'package:flutter_dashboard/screens/funding/funding_page.dart';
+import 'package:flutter_dashboard/screens/home/home_page.dart';
+import 'package:flutter_dashboard/screens/home/widgets/header_widget.dart';
+import 'package:flutter_dashboard/screens/portofolio/portofolio_page.dart';
 import 'package:flutter_dashboard/widgets/home_bottom_bar_widget.dart';
 import 'package:flutter_dashboard/widgets/menu.dart';
 import 'package:flutter_dashboard/widgets/profile/profile.dart';
 
 class InitialScreen extends StatefulWidget {
-  InitialScreen({super.key});
+  const InitialScreen({super.key});
 
 
   @override
@@ -20,8 +21,10 @@ class _InitialScreenState extends State<InitialScreen> {
 
   List screenList = [
     HomePage(),
-    DebtPage(),
     FundingPage(),
+    AuctionPage(),
+    PortofolioPage(),
+    Container(),
   ];
 
   int _currentIndex = 0;
@@ -34,11 +37,10 @@ class _InitialScreenState extends State<InitialScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       key: scaffoldKey,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(40),
+        preferredSize: Size.fromHeight(60),
         child: Header(scaffoldKey: scaffoldKey,),
       ),
       drawer: SizedBox(

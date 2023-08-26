@@ -7,9 +7,9 @@ class Scheduled extends StatelessWidget {
   Scheduled({super.key});
 
   final List<ScheduledModel> scheduled = [
-    ScheduledModel(title: "Hatha Yoga", date: "Today, 9AM - 10AM"),
-    ScheduledModel(title: "Body Combat", date: "Tomorrow, 5PM - 6PM"),
-    ScheduledModel(title: "Hatha Yoga", date: "Wednesday, 9AM - 10AM"),
+    ScheduledModel(title: "Nino Anime Figure", date: "Rp 2.000.000 (2nd place)"),
+    ScheduledModel(title: "Akun Instagram Fo...", date: "Rp 2.500.000 (1st place)"),
+    ScheduledModel(title: "Video Lebaran", date: "Rp 3.400.000 (lose position)"),
   ];
 
   @override
@@ -18,7 +18,7 @@ class Scheduled extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          "Scheduled",
+          "Bid Berlangsung (3)",
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
         const SizedBox(

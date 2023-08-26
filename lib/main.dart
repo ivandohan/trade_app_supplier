@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/const.dart';
-import 'package:flutter_dashboard/dashboard.dart';
-import 'package:flutter_dashboard/pages/debt/debt_page.dart';
-import 'package:flutter_dashboard/pages/funding/funding_page.dart';
+import 'package:flutter_dashboard/constants/const.dart';
+import 'package:flutter_dashboard/screens/funding/funding_page.dart';
+import 'package:flutter_dashboard/screens/initial_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,26 +36,13 @@ class MyApp extends StatelessWidget {
           fontFamily: 'IBMPlexSans',
           brightness: Brightness.dark),
       routes: {
-        '/': (context) => DashBoard(),
-        '/debt-info': (context) => DebtPage(),
+        '/': (context) => InitialScreen(),
         '/funding-info': (context) => FundingPage(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/') {
           return MaterialPageRoute(
-            builder: (context) => DashBoard(),
-            settings: settings,
-          );
-        }
-        if (settings.name == '/debt-info') {
-          return MaterialPageRoute(
-            builder: (context) => DebtPage(),
-            settings: settings,
-          );
-        }
-        if (settings.name == '/funding-info') {
-          return MaterialPageRoute(
-            builder: (context) => FundingPage(),
+            builder: (context) => InitialScreen(),
             settings: settings,
           );
         }

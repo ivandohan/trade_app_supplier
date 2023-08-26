@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/Responsive.dart';
+import 'package:flutter_dashboard/constants/responsive.dart';
 import 'package:flutter_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,10 +16,7 @@ class _MenuState extends State<Menu> {
   List<MenuModel> menu = [
     MenuModel(icon: 'assets/svg/home.svg', title: "Dashboard"),
     MenuModel(icon: 'assets/svg/profile.svg', title: "Profile"),
-    MenuModel(icon: 'assets/svg/exercise.svg', title: "Exercise"),
-    MenuModel(icon: 'assets/svg/setting.svg', title: "Settings"),
-    MenuModel(icon: 'assets/svg/history.svg', title: "History"),
-    MenuModel(icon: 'assets/svg/signout.svg', title: "Signout"),
+    MenuModel(icon: 'assets/svg/signout.svg', title: "Keluar"),
   ];
 
   int selected = 0;

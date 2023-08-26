@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/responsive.dart';
+import 'package:flutter_dashboard/constants/responsive.dart';
 import 'package:flutter_dashboard/widgets/custom_card.dart';
 
 class DebtCardWidget extends StatelessWidget {
@@ -9,9 +9,17 @@ class DebtCardWidget extends StatelessWidget {
   final String debtInterest;
   final String deadline;
   final String estimateTime;
+  final Function onClick;
 
   const DebtCardWidget({
-    super.key, required this.name, required this.nominal, required this.riskLevel, required this.debtInterest, required this.deadline, required this.estimateTime,
+    super.key,
+    required this.name,
+    required this.nominal,
+    required this.riskLevel,
+    required this.debtInterest,
+    required this.deadline,
+    required this.estimateTime,
+    required this.onClick,
   });
 
   @override
@@ -96,7 +104,9 @@ class DebtCardWidget extends StatelessWidget {
                         const SizedBox(width: 10,),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              onClick("commit");
+                            },
                             child: Text(
                                 "Danai"
                             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/Responsive.dart';
+import 'package:flutter_dashboard/constants/responsive.dart';
 import 'package:flutter_dashboard/model/health_model.dart';
 import 'package:flutter_dashboard/widgets/custom_card.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,12 +8,12 @@ class ActivityDetailsCard extends StatelessWidget {
   const ActivityDetailsCard({super.key});
 
   final List<HealthModel> healthDetails = const [
+    HealthModel(icon: 'assets/svg/steps.svg', value: "10", title: "Permohonan Pendanaan", routeName: "/debt-info"),
     HealthModel(
         icon: 'assets/svg/burn.svg', value: "5", title: "Pendanaan Berlangsung", routeName: "/funding-info"),
-    HealthModel(icon: 'assets/svg/steps.svg', value: "100", title: "Permohonan Pendanaan", routeName: "/debt-info"),
-    HealthModel(icon: 'assets/svg/sleep.svg', value: "89", title: "Penunggak", routeName: ""),
+    HealthModel(icon: 'assets/svg/sleep.svg', value: "0", title: "Penunggak", routeName: ""),
     HealthModel(
-        icon: 'assets/svg/distance.svg', value: "Rp 3.000.000", title: "Cash in Hand", routeName: ""),
+        icon: 'assets/svg/distance.svg', value: "Rp 2.757.778", title: "Proyeksi Keuntungan", routeName: ""),
   ];
 
   @override
@@ -29,9 +29,7 @@ class ActivityDetailsCard extends StatelessWidget {
       ),
       itemBuilder: (context, i) {
         return GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, healthDetails[i].routeName);
-          },
+          onTap: () {},
           child: CustomCard(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

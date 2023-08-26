@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/responsive.dart';
-import 'package:flutter_dashboard/const.dart';
+import 'package:flutter_dashboard/constants/responsive.dart';
+import 'package:flutter_dashboard/constants/const.dart';
 import 'package:flutter_dashboard/widgets/profile/widgets/scheduled.dart';
 import 'package:flutter_dashboard/widgets/profile/widgets/weightHeightBloodCard.dart';
 
@@ -33,14 +33,14 @@ class Profile extends StatelessWidget {
                 height: 15,
               ),
               const Text(
-                "Summer",
+                "Supplier 1",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               const SizedBox(
                 height: 2,
               ),
               Text(
-                "Edit health details",
+                "Terverifikasi",
                 style: TextStyle(
                   fontSize: 12,
                   color: Theme.of(context).primaryColor,
